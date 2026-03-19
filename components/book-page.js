@@ -108,11 +108,13 @@ export function InfernoPage({ book }) {
           <SectionLabel className="mb-3">Em conversa</SectionLabel>
           <h2 className="mb-4 font-display text-4xl text-stone-100">Apresentação comentada</h2>
           <p className="mb-6 leading-8 text-stone-300">
-            Um espaço reservado para futura conversa em vídeo ou podcast sobre a proposta, o clima e os
-            temas centrais de {book.title}.
+            Uma apresentação comentada sobre a proposta, o clima e os temas centrais de {book.title}.
           </p>
-          <div className="flex aspect-video items-center justify-center rounded-[1.5rem] border border-stone-800 bg-black/30 px-8 text-center text-stone-500">
-            Placeholder editorial para vídeo ou podcast.
+          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
+            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
+              <source src="/media/apresentacao_comentada.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
           </div>
         </div>
 
@@ -160,6 +162,16 @@ export function InfernoPage({ book }) {
           <SecondaryButton href="/media/slides.pdf" external>
             Ver dossiê visual completo (PDF)
           </SecondaryButton>
+          <div className="pt-4">
+            <a
+              href="/media/podcast.m4a"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
+            >
+              Ouvir podcast comentado
+            </a>
+          </div>
         </div>
       </section>
 
