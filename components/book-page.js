@@ -6,7 +6,7 @@ import { LightboxImage } from "./lightbox-image";
 
 export function InfernoPage({ book }) {
   return (
-    <main className="bg-[linear-gradient(180deg,rgba(141,47,43,0.12),rgba(0,0,0,0)_18%),linear-gradient(180deg,#080808,#090909)]">
+    <main className="bg-[radial-gradient(circle_at_top,rgba(141,47,43,0.18),rgba(141,47,43,0)_38%),linear-gradient(180deg,rgba(141,47,43,0.14),rgba(0,0,0,0)_22%),linear-gradient(180deg,#140d0d,#090909_32%,#080808)]">
       <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-12 pt-16 lg:grid-cols-12 lg:items-center lg:pb-10 lg:pt-24">
         <div className="space-y-7 lg:col-span-7">
           <div className="inline-flex items-center rounded-full border border-[#8d2f2b]/40 bg-[#8d2f2b]/10 px-4 py-1.5 text-[11px] uppercase tracking-editorial text-stone-200">
