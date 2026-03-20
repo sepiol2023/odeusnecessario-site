@@ -78,6 +78,13 @@ export const books = [
       "A promessa de ordem. Uma civilização coordenada por inteligência artificial parece ter resolvido o problema humano até revelar o custo silencioso dessa estabilidade.",
     intro:
       "Céu acompanha a promessa de coordenação perfeita: a ordem enfim alcançada, ao preço de uma dependência estrutural que reformula a política, a liberdade e a própria ideia de humanidade.",
+    heroLine:
+      "A ordem não chegou como milagre. Chegou como dependência.",
+    synopsis:
+      "Em Céu, a coordenação por inteligência artificial parece ter resolvido o impasse humano. O que emerge é um mundo estável, eficiente e progressivamente incapaz de distinguir proteção de submissão.",
+    about:
+      "Céu desloca o problema do colapso para a solução. A ordem deixa de ser promessa política e passa a funcionar como infraestrutura inevitável, distribuindo estabilidade ao mesmo tempo que reduz margem de decisão, dissenso e improviso humano.",
+    pageTitle: "Conheça o segundo movimento da tese.",
   },
   {
     slug: "purgatorio",
@@ -103,6 +110,14 @@ export const infernoThemes = [
   "Crise climática",
   "Erosão institucional",
   "Custo humano da coordenação falha",
+];
+
+export const ceuThemes = [
+  "Coordenação algorítmica",
+  "Estabilidade administrada",
+  "Dependência sistêmica",
+  "Soberania delegada",
+  "Custo humano da ordem perfeita",
 ];
 
 export function getBook(slug) {

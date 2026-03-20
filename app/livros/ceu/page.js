@@ -1,4 +1,4 @@
-import { BaseBookPage } from "../../../components/book-page";
+import { CeuPage } from "../../../components/book-page";
 import { getBook } from "../../../data/site";
 
 const book = getBook("ceu");
@@ -6,9 +6,9 @@ const book = getBook("ceu");
 export const metadata = {
   title: "Céu",
   description:
-    "Página-base do livro Céu, Livro II de O Deus Necessário, com capa real, introdução e espaço para futura mídia.",
+    "Página do livro Céu, Livro II de O Deus Necessário, com trailer, apresentação comentada, mapa visual e materiais complementares.",
 };
 
 export default function CeuRoute() {
-  return <BaseBookPage book={book} />;
+  return <CeuPage book={book} />;
 }
