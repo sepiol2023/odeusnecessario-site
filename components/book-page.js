@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ceuThemes, essays, infernoThemes, site } from "../data/site";
+import { ceuThemes, essays, infernoThemes, purgatorioThemes, site } from "../data/site";
 import { PrimaryButton, SecondaryButton, SectionLabel } from "./ui";
 import { EssayCard, ThemePill } from "./cards";
 import { LightboxImage } from "./lightbox-image";
@@ -387,6 +387,204 @@ export function CeuPage({ book }) {
             <div className="flex flex-wrap gap-4 pt-2">
               <PrimaryButton href={book.buyHref} external>
                 Comprar Céu
+              </PrimaryButton>
+              <SecondaryButton href={site.links.trilogy} external>
+                Conhecer a trilogia
+              </SecondaryButton>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+export function PurgatorioPage({ book }) {
+  return (
+    <main className="bg-[radial-gradient(circle_at_top,rgba(74,101,66,0.18),rgba(74,101,66,0)_40%),linear-gradient(180deg,rgba(74,101,66,0.12),rgba(0,0,0,0)_22%),linear-gradient(180deg,#10150f,#090b09_34%,#080808)]">
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-12 pt-16 lg:grid-cols-12 lg:items-center lg:pb-10 lg:pt-24">
+        <div className="space-y-7 lg:col-span-7">
+          <div className="inline-flex items-center rounded-full border border-[#4a6542]/40 bg-[#4a6542]/10 px-4 py-1.5 text-[11px] uppercase tracking-editorial text-stone-200">
+            Purgatório • Livro III
+          </div>
+          <div className="space-y-5">
+            <div>
+              <SectionLabel className="mb-3">Livro</SectionLabel>
+              <h1 className="font-display text-6xl leading-[0.95] text-stone-100 md:text-8xl">
+                {book.title}
+              </h1>
+            </div>
+            <p className="text-sm uppercase tracking-editorial text-stone-500">{book.subtitle}</p>
+            <p className="max-w-2xl text-xl leading-9 text-stone-200 md:text-2xl">{book.heroLine}</p>
+            <p className="max-w-2xl text-lg leading-8 text-stone-400">{book.synopsis}</p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <PrimaryButton href={book.buyHref} external>
+              Comprar
+            </PrimaryButton>
+            <SecondaryButton href="#trailer">Assistir trailer</SecondaryButton>
+          </div>
+        </div>
+
+        <div className="lg:col-span-5">
+          <div className="relative mx-auto max-w-sm">
+            <div className="absolute -inset-8 rounded-[2.75rem] bg-[#4a6542]/15 blur-3xl" />
+            <div className="relative rounded-[2rem] border border-stone-800 bg-[#0d0d0d]/90 p-4 shadow-panel">
+              <div className="overflow-hidden rounded-[1.5rem] border border-[#4a6542]/25 bg-black">
+                <Image
+                  src={book.cover}
+                  alt={`Capa do livro ${book.title}`}
+                  width={700}
+                  height={1050}
+                  className="aspect-[2/3] h-auto w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-8">
+        <div className="rounded-[2rem] border border-stone-800 bg-black/25 px-8 py-8 text-lg leading-8 text-stone-300">
+          <p>{book.intro}</p>
+        </div>
+      </section>
+
+      <section id="trailer" className="mx-auto max-w-7xl px-6 py-8">
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-6 shadow-panel md:p-8">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <SectionLabel className="mb-2">Trailer oficial</SectionLabel>
+              <h2 className="font-display text-4xl text-stone-100">
+                O que sobra depois da grande solução.
+              </h2>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
+            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
+              <source src="/media/Trailer_purgatorio.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-8 lg:grid-cols-12">
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-7">
+          <SectionLabel className="mb-3">Sobre o livro</SectionLabel>
+          <h2 className="mb-5 font-display text-4xl text-stone-100">Habitar o resto</h2>
+          <div className="space-y-5 text-lg leading-8 text-stone-300">
+            <p>{book.about}</p>
+            <p>
+              Em Purgatório, a pergunta deixa de ser como administrar a crise ou como construir a ordem
+              total. O foco recai sobre os sujeitos, zonas e comunidades que sobrevivem depois que as grandes
+              respostas históricas já se impuseram.
+            </p>
+            <p>
+              É um livro de limiar: entre ruína e adaptação, memória e recomposição, perda estrutural e
+              tentativa persistente de reconstruir algum horizonte humano.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex min-h-[320px] items-end rounded-[2rem] border border-stone-800 bg-[linear-gradient(180deg,rgba(74,101,66,0.14),rgba(0,0,0,0)),linear-gradient(135deg,#111510,#090909)] p-8 lg:col-span-5">
+          <div>
+            <SectionLabel className="mb-3 text-stone-400">Em torno do livro</SectionLabel>
+            <div className="mb-3 font-display text-3xl text-stone-100">Resto, travessia, recomposição.</div>
+            <p className="leading-7 text-stone-400">
+              Um mundo posterior à solução e à catástrofe, onde sobreviver já não basta e reconstruir
+              sentido volta a ser necessário.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-8 lg:grid-cols-12">
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-5">
+          <SectionLabel className="mb-3">Em conversa</SectionLabel>
+          <h2 className="mb-4 font-display text-4xl text-stone-100">Apresentação comentada</h2>
+          <p className="mb-6 leading-8 text-stone-300">
+            Uma apresentação comentada sobre a proposta, o clima e os temas centrais de {book.title}.
+          </p>
+          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
+            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
+              <source src="/media/apresentacao_comentada_purgatorio.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+        </div>
+
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-7">
+          <SectionLabel className="mb-3">Eixos centrais</SectionLabel>
+          <h2 className="mb-6 font-display text-4xl text-stone-100">O que estrutura o livro</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {purgatorioThemes.map((theme) => (
+              <ThemePill key={theme}>{theme}</ThemePill>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-8 lg:grid-cols-12">
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-7">
+          <SectionLabel className="mb-3">Ensaios relacionados</SectionLabel>
+          <h2 className="mb-6 font-display text-4xl text-stone-100">O universo conceitual de Purgatório</h2>
+          <div className="space-y-4">
+            {essays.map((essay) => (
+              <EssayCard key={essay.title} essay={essay} />
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-5">
+          <SectionLabel className="mb-3">Mapa conceitual</SectionLabel>
+          <h2 className="mb-4 font-display text-4xl text-stone-100">Arquitetura de Purgatório</h2>
+          <p className="mb-6 leading-8 text-stone-300">
+            Um diagrama visual das zonas, tensões e permanências que organizam o livro, acompanhado de um
+            dossiê visual mais completo em PDF.
+          </p>
+          <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black/70 p-4 md:p-5">
+            <LightboxImage
+              src="/media/mapa_visual_purgatorio.png"
+              alt="Mapa conceitual do livro Purgatório"
+              width={1200}
+              height={1200}
+              thumbClassName="aspect-[1/1.18] h-auto w-full object-contain transition-opacity hover:opacity-90"
+            />
+          </div>
+          <p className="mb-6 text-sm leading-6 text-stone-500">
+            Clique no mapa para ampliar e ler melhor os elementos visuais.
+          </p>
+          <SecondaryButton href="/media/slides_purgatorio.pdf" external>
+            Ver dossiê visual completo (PDF)
+          </SecondaryButton>
+          <div className="pt-4">
+            <a
+              href="/media/podcast_purgatorio.m4a"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
+            >
+              Ouvir podcast comentado
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-24 pt-8">
+        <div className="rounded-[2rem] border border-[#4a6542]/25 bg-[linear-gradient(135deg,rgba(74,101,66,0.12),rgba(0,0,0,0)_45%),linear-gradient(180deg,#111111,#090909)] p-10 md:p-14">
+          <div className="max-w-3xl space-y-5">
+            <SectionLabel className="text-stone-400">Fechamento</SectionLabel>
+            <h2 className="font-display text-4xl leading-tight text-stone-100 md:text-6xl">
+              {book.pageTitle}
+            </h2>
+            <p className="text-lg leading-8 text-stone-300">
+              Entre no universo de {book.title}, acompanhe seus materiais e explore o ponto em que a
+              história já cobrou seu preço, mas a reconstrução de sentido continua em aberto.
+            </p>
+            <div className="flex flex-wrap gap-4 pt-2">
+              <PrimaryButton href={book.buyHref} external>
+                Comprar Purgatório
               </PrimaryButton>
               <SecondaryButton href={site.links.trilogy} external>
                 Conhecer a trilogia

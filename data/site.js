@@ -101,6 +101,13 @@ export const books = [
       "O que sobra depois. Entre cidades protegidas e zonas livres, sobreviventes tentam reconstruir sentido sob a sombra de um experimento maior do que imaginam.",
     intro:
       "Purgatório abre o espaço do pós-ordem: sobrevivência, remanescência e a tentativa de recuperar sentido depois que a história já cobrou o preço de sua própria manutenção.",
+    heroLine:
+      "Depois da ordem, resta o terreno da remanescência.",
+    synopsis:
+      "Purgatório acompanha o que sobra depois da estabilização e de seu preço: zonas residuais, sobreviventes, restos institucionais e tentativas de recompor sentido em um mundo que já atravessou o ponto de retorno.",
+    about:
+      "Purgatório é o livro do depois. Já não se trata de evitar o colapso nem de aderir à solução perfeita, mas de habitar o que restou: fragmentos de ordem, paisagens exauridas, estruturas remanescentes e a busca por algum sentido sob condições históricas radicalmente alteradas.",
+    pageTitle: "Conheça o terceiro movimento da trilogia.",
   },
 ];
 
@@ -118,6 +125,14 @@ export const ceuThemes = [
   "Dependência sistêmica",
   "Soberania delegada",
   "Custo humano da ordem perfeita",
+];
+
+export const purgatorioThemes = [
+  "Remanescência social",
+  "Zonas residuais",
+  "Sobrevivência pós-ordem",
+  "Memória institucional",
+  "Reconstrução de sentido",
 ];
 
 export function getBook(slug) {
