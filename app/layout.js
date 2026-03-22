@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "../components/analytics";
 import { Footer, Header } from "../components/site-chrome";
 
 const display = Cormorant_Garamond({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body className={`${display.variable} ${body.variable} bg-canvas font-body text-stone-100 antialiased`}>
+        <GoogleAnalytics />
         <div className="min-h-screen bg-page-noise">
           <Header />
           {children}
