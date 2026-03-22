@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BookCard, EssayCard } from "../components/cards";
+import { LightboxImage } from "../components/lightbox-image";
 import { PrimaryButton, SecondaryButton, SectionLabel } from "../components/ui";
 import { books, essays, site } from "../data/site";
 
@@ -8,8 +9,8 @@ const inferno = books[0];
 export default function HomePage() {
   return (
     <main>
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-16 pt-20 lg:grid-cols-12 lg:items-end lg:pb-24 lg:pt-28">
-        <div className="space-y-8 lg:col-span-7">
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-16 pt-20 lg:grid-cols-12 lg:items-stretch lg:pb-24 lg:pt-28">
+        <div className="space-y-8 lg:col-span-6">
           <div className="inline-flex items-center rounded-full border border-amber-200/20 bg-amber-50/5 px-4 py-1.5 text-[11px] uppercase tracking-editorial text-amber-100/80">
             Ficção especulativa • colapso • coordenação • IA
           </div>
@@ -30,35 +31,29 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="lg:col-span-5">
-          <div className="rounded-[2rem] border border-stone-800 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0)),#101010] p-6 shadow-panel">
-            <div className="grid grid-cols-3 gap-4">
-              {books.map((book) => (
-                <a
-                  key={book.slug}
-                  href={book.href}
-                  className="flex min-h-[220px] flex-col justify-between rounded-[1.4rem] border border-stone-800 bg-black/25 p-3 transition-colors hover:border-stone-700"
-                >
-                  <div className="mb-3 overflow-hidden rounded-[1rem] border border-stone-800 bg-black">
-                    <Image
-                      src={book.cover}
-                      alt={`Capa ${book.title}`}
-                      width={300}
-                      height={450}
-                      className="aspect-[2/3] h-auto w-full object-cover"
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-[10px] uppercase tracking-editorial text-stone-500">
-                      {book.shortLabel}
-                    </div>
-                    <div className="font-display text-xl text-stone-100">{book.title}</div>
-                  </div>
-                </a>
-              ))}
+        <div className="lg:col-span-6">
+          <div className="flex h-full flex-col rounded-[2rem] border border-stone-800 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0)),#101010] p-6 shadow-panel">
+            <div className="mb-5 flex items-center justify-between gap-4">
+              <div>
+                <SectionLabel className="mb-2">Trailer oficial</SectionLabel>
+                <h2 className="font-display text-3xl text-stone-100 md:text-4xl">
+                  A mecânica do colapso em escala de trilogia.
+                </h2>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
+              <video
+                controls
+                preload="metadata"
+                className="aspect-video h-auto w-full"
+                poster="/covers/inferno.jpg"
+              >
+                <source src="/media/Trailer_trilogia.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeo HTML5.
+              </video>
             </div>
             <p className="mt-5 text-sm leading-7 text-stone-500">
-              Três livros, um mesmo eixo: o limite estrutural da autonomia humana em sistemas complexos.
+              Uma introdução audiovisual ao arco completo de O Deus Necessário.
             </p>
           </div>
         </div>
@@ -88,6 +83,70 @@ export default function HomePage() {
               A trilogia acompanha esse problema em três momentos: a deterioração, a aparente solução e o
               que resta depois do preço ser cobrado.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mb-10">
+          <SectionLabel className="mb-3">Mídias da trilogia</SectionLabel>
+          <h2 className="mb-4 font-display text-4xl text-stone-100 md:text-5xl">
+            Materiais visuais e comentados de O Deus Necessário
+          </h2>
+          <p className="max-w-3xl text-lg leading-8 text-stone-300">
+            Um conjunto de materiais complementares para apresentar a trilogia em registro visual,
+            conceitual e comentado: trailer, apresentação, mapa, dossiê e podcast.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-8 lg:grid-cols-12">
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-5">
+          <SectionLabel className="mb-3">Apresentação comentada</SectionLabel>
+          <h2 className="mb-4 font-display text-4xl text-stone-100">O projeto em primeira pessoa</h2>
+          <p className="mb-6 leading-8 text-stone-300">
+            Uma apresentação comentada sobre a proposta da trilogia, seus eixos e o arco que liga crise,
+            ordem e remanescência.
+          </p>
+          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
+            <video controls preload="metadata" className="aspect-video h-auto w-full" poster="/covers/ceu.jpg">
+              <source src="/media/apresentacao_comentada_trilogia.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+        </div>
+
+        <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-7">
+          <SectionLabel className="mb-3">Mapa conceitual</SectionLabel>
+          <h2 className="mb-4 font-display text-4xl text-stone-100">Arquitetura da trilogia</h2>
+          <p className="mb-6 leading-8 text-stone-300">
+            Um diagrama visual do arco completo de O Deus Necessário, com suas camadas, transições e
+            relações estruturais, acompanhado de um dossiê visual em PDF.
+          </p>
+          <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black/70 p-4 md:p-5">
+            <LightboxImage
+              src="/media/mapa_visual_trilogia.png"
+              alt="Mapa conceitual da trilogia O Deus Necessário"
+              width={1200}
+              height={1200}
+              thumbClassName="aspect-[1/1.18] h-auto w-full object-contain transition-opacity hover:opacity-90"
+            />
+          </div>
+          <p className="mb-6 text-sm leading-6 text-stone-500">
+            Clique no mapa para ampliar e ler melhor os elementos visuais.
+          </p>
+          <SecondaryButton href="/media/slides_trilogia.pdf" external>
+            Ver dossiê visual completo (PDF)
+          </SecondaryButton>
+          <div className="pt-4">
+            <a
+              href="/media/podcast_trilogia.m4a"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
+            >
+              Ouvir podcast comentado
+            </a>
           </div>
         </div>
       </section>
