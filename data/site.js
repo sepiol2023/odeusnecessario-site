@@ -8,6 +8,8 @@ export const site = {
   links: {
     trilogy:
       "https://www.amazon.com.br/dp/B0GSS8HSSM?binding=kindle_edition&qid=1773930848&sr=8-4&ref=dbs_dp_rwt_sb_pc_tkin",
+    trilogyEn:
+      "https://www.amazon.com/dp/B0GTRTR8G1?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin",
     substack: "https://sergiopioli.substack.com/",
   },
 };
