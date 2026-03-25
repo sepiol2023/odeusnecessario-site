@@ -12,6 +12,49 @@ export const site = {
   },
 };
 
+export const youtube = {
+  trilogy: {
+    pt: {
+      trailer: "https://youtu.be/yLrXaQDT30U",
+      summary: "https://youtu.be/UoFy__sQ2Lw",
+    },
+    en: {
+      trailer: "https://youtu.be/mpiTz7AGp-c",
+      summary: "https://youtu.be/QKkOiIg5NKA",
+    },
+  },
+  inferno: {
+    pt: {
+      trailer: "https://youtu.be/SBi6ElwMvqk",
+      summary: "https://youtu.be/8T4MxYG2ZQg",
+    },
+    en: {
+      trailer: "https://youtu.be/NSuYYVNmtuo",
+      summary: "https://youtu.be/aqF5jhNT2AI",
+    },
+  },
+  ceu: {
+    pt: {
+      trailer: "https://youtu.be/dO3UIUvGNDw",
+      summary: "https://youtu.be/RyyuEJuJ56c",
+    },
+    en: {
+      trailer: "https://youtu.be/O7BFuyvLfY8",
+      summary: "https://youtu.be/oPawhZik1jU",
+    },
+  },
+  purgatorio: {
+    pt: {
+      trailer: "https://youtu.be/lWHU_M1aqII",
+      summary: "https://youtu.be/rG6jMkSeUl0",
+    },
+    en: {
+      trailer: "https://youtu.be/YxsGgbAcYH0",
+      summary: "https://youtu.be/wBgcKwAMbFg",
+    },
+  },
+};
+
 export const essays = [
   {
     title: "Santíssima Trindade",
@@ -48,7 +91,7 @@ export const books = [
     accent: "red",
     accentHex: "#8d2f2b",
     href: "/livros/inferno",
-    cover: "/covers/inferno.jpg",
+    cover: "/covers/[PT] Inferno - Capa.jpg",
     buyHref:
       "https://www.amazon.com.br/Inferno-Deus-Necess%C3%A1rio-Livro-I-ebook/dp/B0GHG4ML5Y/ref=sr_1_3?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=35VJMOX0ME4JT&dib=eyJ2IjoiMSJ9.w78mLMeLUef4lKfzTuKFKJ0rGsWIimd-8MTd-tZ-AqF2iofRSezPZyuO7u_42zDnI-CtU-Jvc_rFh-BNCAghOgMP7DOmxYI1h_Ve1LJpAPIZbVPkLTXxY1J742DSjA1Fz4Ld05vxHtfST2Cf9a6KMw.5TemyaAfNuxFjF9LZp0oCa34FXsDNAtBO9uZolc1oQM&dib_tag=se&keywords=sergio+pioli&qid=1773930848&sprefix=sergio+piol%2Caps%2C248&sr=8-3",
     description:
@@ -71,7 +114,7 @@ export const books = [
     accent: "blue",
     accentHex: "#2e5778",
     href: "/livros/ceu",
-    cover: "/covers/ceu.jpg",
+    cover: "/covers/[PT] Céu - Capa.jpg",
     buyHref:
       "https://www.amazon.com.br/C%C3%A9u-Deus-Necess%C3%A1rio-Livro-II-ebook/dp/B0GMKV995S/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=35VJMOX0ME4JT&dib=eyJ2IjoiMSJ9.w78mLMeLUef4lKfzTuKFKJ0rGsWIimd-8MTd-tZ-AqF2iofRSezPZyuO7u_42zDnI-CtU-Jvc_rFh-BNCAghOgMP7DOmxYI1h_Ve1LJpAPIZbVPkLTXxY1J742DSjA1Fz4Ld05vxHtfST2Cf9a6KMw.5TemyaAfNuxFjF9LZp0oCa34FXsDNAtBO9uZolc1oQM&dib_tag=se&keywords=sergio+pioli&qid=1773930848&sprefix=sergio+piol%2Caps%2C248&sr=8-5",
     description:
@@ -94,7 +137,7 @@ export const books = [
     accent: "green",
     accentHex: "#4a6542",
     href: "/livros/purgatorio",
-    cover: "/covers/purgatorio.jpg",
+    cover: "/covers/[PT] Purgatório - Capa.jpg",
     buyHref:
       "https://www.amazon.com.br/Purgat%C3%B3rio-Deus-Necess%C3%A1rio-Livro-III-ebook/dp/B0GSS2L8BD/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=35VJMOX0ME4JT&dib=eyJ2IjoiMSJ9.w78mLMeLUef4lKfzTuKFKJ0rGsWIimd-8MTd-tZ-AqF2iofRSezPZyuO7u_42zDnI-CtU-Jvc_rFh-BNCAghOgMP7DOmxYI1h_Ve1LJpAPIZbVPkLTXxY1J742DSjA1Fz4Ld05vxHtfST2Cf9a6KMw.5TemyaAfNuxFjF9LZp0oCa34FXsDNAtBO9uZolc1oQM&dib_tag=se&keywords=sergio+pioli&qid=1773930848&sprefix=sergio+piol%2Caps%2C248&sr=8-4",
     description:

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BookCard, EssayCard } from "../components/cards";
 import { LightboxImage } from "../components/lightbox-image";
 import { PrimaryButton, SecondaryButton, SectionLabel } from "../components/ui";
-import { books, essays, site } from "../data/site";
+import { books, essays, site, youtube } from "../data/site";
 
 const inferno = books[0];
 
@@ -42,15 +42,14 @@ export default function HomePage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-              <video
-                controls
-                preload="metadata"
+              <iframe
+                src={youtube.trilogy.pt.trailer.replace("https://youtu.be/", "https://www.youtube.com/embed/")}
+                title="Trailer oficial da trilogia O Deus Necessário"
                 className="aspect-video h-auto w-full"
-                poster="/covers/inferno.jpg"
-              >
-                <source src="/media/Trailer_trilogia.mp4" type="video/mp4" />
-                Seu navegador não suporta vídeo HTML5.
-              </video>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
             </div>
             <p className="mt-5 text-sm leading-7 text-stone-500">
               Uma introdução audiovisual ao arco completo de O Deus Necessário.
@@ -109,10 +108,14 @@ export default function HomePage() {
             ordem e remanescência.
           </p>
           <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-            <video controls preload="metadata" className="aspect-video h-auto w-full" poster="/covers/ceu.jpg">
-              <source src="/media/apresentacao_comentada_trilogia.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo HTML5.
-            </video>
+            <iframe
+              src={youtube.trilogy.pt.summary.replace("https://youtu.be/", "https://www.youtube.com/embed/")}
+              title="Resumo em vídeo da trilogia O Deus Necessário"
+              className="aspect-video h-auto w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
           </div>
         </div>
 
@@ -125,7 +128,7 @@ export default function HomePage() {
           </p>
           <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black/70 p-4 md:p-5">
             <LightboxImage
-              src="/media/mapa_visual_trilogia.png"
+              src="/media/[PT] Trilogia - Infográfico.png"
               alt="Mapa conceitual da trilogia O Deus Necessário"
               width={1200}
               height={1200}
@@ -135,12 +138,12 @@ export default function HomePage() {
           <p className="mb-6 text-sm leading-6 text-stone-500">
             Clique no mapa para ampliar e ler melhor os elementos visuais.
           </p>
-          <SecondaryButton href="/media/slides_trilogia.pdf" external>
+          <SecondaryButton href="/media/[PT] Trilogia - Slides.pdf" external>
             Ver dossiê visual completo (PDF)
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/podcast_trilogia.m4a"
+              href="/media/[PT] Trilogia - Podcast.m4a"
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"

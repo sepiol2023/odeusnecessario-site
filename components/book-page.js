@@ -1,8 +1,25 @@
 import Image from "next/image";
-import { ceuThemes, essays, infernoThemes, purgatorioThemes, site } from "../data/site";
+import { ceuThemes, essays, infernoThemes, purgatorioThemes, site, youtube } from "../data/site";
 import { PrimaryButton, SecondaryButton, SectionLabel } from "./ui";
 import { EssayCard, ThemePill } from "./cards";
 import { LightboxImage } from "./lightbox-image";
+
+function YouTubeEmbed({ href, title }) {
+  const embedHref = href.replace("https://youtu.be/", "https://www.youtube.com/embed/");
+
+  return (
+    <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
+      <iframe
+        src={embedHref}
+        title={title}
+        className="aspect-video h-auto w-full"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />
+    </div>
+  );
+}
 
 export function InfernoPage({ book }) {
   return (
@@ -65,12 +82,7 @@ export function InfernoPage({ book }) {
               </h2>
             </div>
           </div>
-          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
-              <source src="/media/Inferno_video.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo HTML5.
-            </video>
-          </div>
+          <YouTubeEmbed href={youtube.inferno.pt.trailer} title="Trailer oficial de Inferno" />
         </div>
       </section>
 
@@ -110,12 +122,7 @@ export function InfernoPage({ book }) {
           <p className="mb-6 leading-8 text-stone-300">
             Uma apresentação comentada sobre a proposta, o clima e os temas centrais de {book.title}.
           </p>
-          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
-              <source src="/media/apresentacao_comentada.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo HTML5.
-            </video>
-          </div>
+          <YouTubeEmbed href={youtube.inferno.pt.summary} title="Resumo em vídeo de Inferno" />
         </div>
 
         <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-7">
@@ -149,7 +156,7 @@ export function InfernoPage({ book }) {
           </p>
           <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black/70 p-4 md:p-5">
             <LightboxImage
-              src="/media/mapa_visual.png"
+              src="/media/[PT] Inferno - Infográfico.png"
               alt="Mapa conceitual do livro Inferno"
               width={1200}
               height={1200}
@@ -159,12 +166,12 @@ export function InfernoPage({ book }) {
           <p className="mb-6 text-sm leading-6 text-stone-500">
             Clique no mapa para ampliar e ler melhor os elementos visuais.
           </p>
-          <SecondaryButton href="/media/slides.pdf" external>
+          <SecondaryButton href="/media/[PT] Inferno - Slides.pdf" external>
             Ver dossiê visual completo (PDF)
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/podcast.m4a"
+              href="/media/[PT] Inferno - Podcast.m4a"
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
@@ -262,12 +269,7 @@ export function CeuPage({ book }) {
               </h2>
             </div>
           </div>
-          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
-              <source src="/media/Trailer_ceu.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo HTML5.
-            </video>
-          </div>
+          <YouTubeEmbed href={youtube.ceu.pt.trailer} title="Trailer oficial de Céu" />
         </div>
       </section>
 
@@ -308,12 +310,7 @@ export function CeuPage({ book }) {
           <p className="mb-6 leading-8 text-stone-300">
             Uma apresentação comentada sobre a proposta, o clima e os temas centrais de {book.title}.
           </p>
-          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
-              <source src="/media/apresentacao_comentada_ceu.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo HTML5.
-            </video>
-          </div>
+          <YouTubeEmbed href={youtube.ceu.pt.summary} title="Resumo em vídeo de Céu" />
         </div>
 
         <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-7">
@@ -347,7 +344,7 @@ export function CeuPage({ book }) {
           </p>
           <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black/70 p-4 md:p-5">
             <LightboxImage
-              src="/media/mapa_visual_ceu.png"
+              src="/media/[PT] Céu - Infográfico.png"
               alt="Mapa conceitual do livro Céu"
               width={1200}
               height={1200}
@@ -357,12 +354,12 @@ export function CeuPage({ book }) {
           <p className="mb-6 text-sm leading-6 text-stone-500">
             Clique no mapa para ampliar e ler melhor os elementos visuais.
           </p>
-          <SecondaryButton href="/media/slides_ceu.pdf" external>
+          <SecondaryButton href="/media/[PT] Céu - Slides.pdf" external>
             Ver dossiê visual completo (PDF)
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/podcast_ceu.m4a"
+              href="/media/[PT] Céu - Podcast.m4a"
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
@@ -460,12 +457,7 @@ export function PurgatorioPage({ book }) {
               </h2>
             </div>
           </div>
-          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
-              <source src="/media/Trailer_purgatorio.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo HTML5.
-            </video>
-          </div>
+          <YouTubeEmbed href={youtube.purgatorio.pt.trailer} title="Trailer oficial de Purgatório" />
         </div>
       </section>
 
@@ -506,12 +498,7 @@ export function PurgatorioPage({ book }) {
           <p className="mb-6 leading-8 text-stone-300">
             Uma apresentação comentada sobre a proposta, o clima e os temas centrais de {book.title}.
           </p>
-          <div className="overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black">
-            <video controls preload="metadata" className="aspect-video h-auto w-full" poster={book.cover}>
-              <source src="/media/apresentacao_comentada_purgatorio.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeo HTML5.
-            </video>
-          </div>
+          <YouTubeEmbed href={youtube.purgatorio.pt.summary} title="Resumo em vídeo de Purgatório" />
         </div>
 
         <div className="rounded-[2rem] border border-stone-800 bg-[#101010]/85 p-8 lg:col-span-7">
@@ -545,7 +532,7 @@ export function PurgatorioPage({ book }) {
           </p>
           <div className="mb-6 overflow-hidden rounded-[1.5rem] border border-stone-800 bg-black/70 p-4 md:p-5">
             <LightboxImage
-              src="/media/mapa_visual_purgatorio.png"
+              src="/media/[PT] Purgatório - Infográfico.png"
               alt="Mapa conceitual do livro Purgatório"
               width={1200}
               height={1200}
@@ -555,12 +542,12 @@ export function PurgatorioPage({ book }) {
           <p className="mb-6 text-sm leading-6 text-stone-500">
             Clique no mapa para ampliar e ler melhor os elementos visuais.
           </p>
-          <SecondaryButton href="/media/slides_purgatorio.pdf" external>
+          <SecondaryButton href="/media/[PT] Purgatório - Slides.pdf" external>
             Ver dossiê visual completo (PDF)
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/podcast_purgatorio.m4a"
+              href="/media/[PT] Purgatório - Podcast.m4a"
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
