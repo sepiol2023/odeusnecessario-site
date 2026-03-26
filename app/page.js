@@ -143,12 +143,12 @@ export default function HomePage() {
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/[PT] Trilogia - Podcast.m4a"
+              href={youtube.trilogy.pt.podcast}
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
             >
-              Ouvir podcast comentado
+              Ouvir podcast no YouTube
             </a>
           </div>
         </div>

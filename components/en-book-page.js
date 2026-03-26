@@ -174,7 +174,7 @@ export function EnglishBookPage({ book }) {
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
             >
-              Listen to the commentary podcast
+              Listen to the podcast on YouTube
             </a>
           </div>
         </div>

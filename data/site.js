@@ -19,40 +19,48 @@ export const youtube = {
     pt: {
       trailer: "https://youtu.be/yLrXaQDT30U",
       summary: "https://youtu.be/UoFy__sQ2Lw",
+      podcast: "https://youtu.be/8Tqv0Dzju1E",
     },
     en: {
       trailer: "https://youtu.be/mpiTz7AGp-c",
       summary: "https://youtu.be/QKkOiIg5NKA",
+      podcast: "https://youtu.be/ikUbyA-IwHk",
     },
   },
   inferno: {
     pt: {
       trailer: "https://youtu.be/SBi6ElwMvqk",
       summary: "https://youtu.be/8T4MxYG2ZQg",
+      podcast: "https://youtu.be/lXgHV3ADvM4",
     },
     en: {
       trailer: "https://youtu.be/NSuYYVNmtuo",
       summary: "https://youtu.be/aqF5jhNT2AI",
+      podcast: "https://youtu.be/ZNeRnKIncec",
     },
   },
   ceu: {
     pt: {
       trailer: "https://youtu.be/dO3UIUvGNDw",
       summary: "https://youtu.be/RyyuEJuJ56c",
+      podcast: "https://youtu.be/VPBGE-gtcM4",
     },
     en: {
       trailer: "https://youtu.be/O7BFuyvLfY8",
       summary: "https://youtu.be/oPawhZik1jU",
+      podcast: "https://youtu.be/2pJjtf2wzKA",
     },
   },
   purgatorio: {
     pt: {
       trailer: "https://youtu.be/lWHU_M1aqII",
       summary: "https://youtu.be/rG6jMkSeUl0",
+      podcast: "https://youtu.be/60zG_42blEM",
     },
     en: {
       trailer: "https://youtu.be/YxsGgbAcYH0",
       summary: "https://youtu.be/wBgcKwAMbFg",
+      podcast: "https://youtu.be/PbmXan3-abE",
     },
   },
 };

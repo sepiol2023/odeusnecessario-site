@@ -171,12 +171,12 @@ export function InfernoPage({ book }) {
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/[PT] Inferno - Podcast.m4a"
+              href={youtube.inferno.pt.podcast}
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
             >
-              Ouvir podcast comentado
+              Ouvir podcast no YouTube
             </a>
           </div>
         </div>
@@ -359,12 +359,12 @@ export function CeuPage({ book }) {
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/[PT] Céu - Podcast.m4a"
+              href={youtube.ceu.pt.podcast}
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
             >
-              Ouvir podcast comentado
+              Ouvir podcast no YouTube
             </a>
           </div>
         </div>
@@ -547,12 +547,12 @@ export function PurgatorioPage({ book }) {
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/[PT] Purgatório - Podcast.m4a"
+              href={youtube.purgatorio.pt.podcast}
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
             >
-              Ouvir podcast comentado
+              Ouvir podcast no YouTube
             </a>
           </div>
         </div>

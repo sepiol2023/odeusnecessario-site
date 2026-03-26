@@ -119,7 +119,7 @@ export const enBooks = [
     media: {
       map: "/media/[EN] Inferno - Infográfico.png",
       slides: "/media/[EN] Inferno - Slides.pdf",
-      podcast: "/media/[EN] Inferno - Podcast.m4a",
+      podcast: youtube.inferno.en.podcast,
     },
   },
   {
@@ -151,7 +151,7 @@ export const enBooks = [
     media: {
       map: "/media/[EN] Céu - Infográfico.png",
       slides: "/media/[EN] Céu - Slides.pdf",
-      podcast: "/media/[EN] Céu - Podcast.m4a",
+      podcast: youtube.ceu.en.podcast,
     },
   },
   {
@@ -183,7 +183,7 @@ export const enBooks = [
     media: {
       map: "/media/[EN] Purgatório - Infográfico.png",
       slides: "/media/[EN] Purgatório - Slides.pdf",
-      podcast: "/media/[EN] Purgatório - Podcast.m4a",
+      podcast: youtube.purgatorio.en.podcast,
     },
   },
 ];

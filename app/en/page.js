@@ -124,12 +124,12 @@ export default function EnglishHomePage() {
           </SecondaryButton>
           <div className="pt-4">
             <a
-              href="/media/[EN] Trilogia - Podcast.m4a"
+              href={youtube.trilogy.en.podcast}
               target="_blank"
               rel="noreferrer"
               className="text-sm text-stone-400 underline decoration-stone-700 underline-offset-4 transition-colors hover:text-stone-200"
             >
-              Listen to the commentary podcast
+              Listen to the podcast on YouTube
             </a>
           </div>
         </div>
